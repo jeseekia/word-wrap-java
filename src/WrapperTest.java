@@ -24,4 +24,19 @@ public class WrapperTest {
 		assertEquals("What a\ngood\ncool\nstringer\nthis\nis!\n",Wrapper.wrap("What a good cool stringer this is!",6));
 	}
 
+	@Test
+	public void enteringAnEmptyStringAnd1ReturnsTheOriginalString() {
+		assertEquals("",Wrapper.wrap("",1));
+	}
+	
+	@Test
+	public void enteringAStringWithJustWhiteSpaceAnd1ReturnsTheOriginalString() {
+		assertEquals(" ",Wrapper.wrap(" ",1));
+	}
+	
+	@Test
+	public void enteringAStringWithLessCharactersThanColumnNumberReturnsTheOriginalString() {
+		assertEquals("Hey now you're an allstar",Wrapper.wrap("Hey now you're an allstar",30));
+	}
+	
 }

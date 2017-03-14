@@ -6,6 +6,11 @@ public class Wrapper {
 	//This method wraps text based on the 
 	public static String wrap(String text, int columnNumber) {
 		
+		if(text.trim().length()<1 || columnNumber<1 || text.length()<columnNumber) { //Consider strings that should just be returned back or a column size too small
+			return text;
+		}
+
+		
 		String[] tempArray = text.split("\\s+"); //Convert text to an array of strings splitting by any amount of whitespace
 		
 		//Convert tempArray to a StringBuiler arraylist and fill with all values from the array
