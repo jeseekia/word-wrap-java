@@ -69,7 +69,7 @@ public class Wrapper {
 		}
 		
 		//System.out.println(newWord.toString());
-		return newWord.toString();
+		return newWord.substring(0, newWord.length()-1).toString();
 	}
 	
 }
