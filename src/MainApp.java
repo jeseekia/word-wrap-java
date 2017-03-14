@@ -6,7 +6,7 @@ public class MainApp {
 		System.out.println(Wrapper.wrap("Hey there friend",7));
 		System.out.println(Wrapper.wrap("Such a good cool string this is!",6));
 		
-		System.out.println(Wrapper.wrap("Such  a good  cool string this is!",6));
+		System.out.println(Wrapper.wrap("What  a good  cool stringer this is!",6));
 
 	}
 
