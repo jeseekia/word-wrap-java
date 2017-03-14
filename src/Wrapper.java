@@ -5,7 +5,7 @@ public class Wrapper {
 
 	public static String wrap(String text, int columnNumber) {
 		
-		String[] tempArray = text.split("\\s"); //create an array of strings
+		String[] tempArray = text.split("\\s+"); //create an array of strings
 		
 		ArrayList<StringBuilder> words = new ArrayList<StringBuilder>();//convert tempArray to arraylist
 		for (int i=0; i<tempArray.length; i++) {
