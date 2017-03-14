@@ -20,7 +20,17 @@ public class WrapperTest {
 	}
 	
 	@Test
-	public void enteringWhatAGoodCoolStringerThisIsAnd6ReturnsProperOutput() {
+	public void enteringAWordThatIsLargerThanColumnNumberReturnsTheWord() {
+		assertEquals("Awesomeness\n",Wrapper.wrap("Awesomeness",10));
+	}
+	
+	@Test
+	public void enteringAStringContainingAllWordsLargerThanColumnNumbeReturnsProperOutput() {
+		assertEquals("Awesomeness\nawesomeness\nawesomeness\n",Wrapper.wrap("Awesomeness awesomeness awesomeness",10));
+	}
+	
+	@Test
+	public void enteringAStringContainingAWordLargerThanColumnNumbeReturnsProperOutput() {
 		assertEquals("What a\ngood\ncool\nstringer\nthis\nis!\n",Wrapper.wrap("What a good cool stringer this is!",6));
 	}
 
